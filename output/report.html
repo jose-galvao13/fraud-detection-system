@@ -1,0 +1,154 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>🔐 Fraud Detection Report - Dark Mode</title>
+        <style>
+            :root {
+                --bg-body: #0f172a;
+                --bg-container: #1e293b;
+                --bg-card: #334155;
+                --text-main: #f8fafc;
+                --text-muted: #94a3b8;
+                --accent: #818cf8;
+                --neon-green: #4ade80;
+                --neon-red: #fb7185;
+                --gradient: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+            }
+            
+            body { 
+                font-family: 'Segoe UI', system-ui, sans-serif; 
+                background-color: var(--bg-body); 
+                color: var(--text-main); 
+                margin: 0; 
+                padding: 20px; 
+            }
+            
+            .container { 
+                max-width: 1100px; 
+                margin: auto; 
+                background: var(--bg-container); 
+                padding: 40px; 
+                border-radius: 20px; 
+                box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5);
+                border: 1px solid rgba(255,255,255,0.05);
+            }
+            
+            header { 
+                text-align: center; 
+                background: var(--gradient); 
+                padding: 40px; 
+                border-radius: 16px; 
+                margin-bottom: 40px;
+                box-shadow: 0 10px 15px -3px rgba(0,0,0,0.2);
+            }
+            
+            h1 { margin: 0; font-size: 2.5em; letter-spacing: -1px; }
+            h2 { color: var(--accent); border-bottom: 1px solid var(--bg-card); padding-bottom: 10px; margin-top: 50px; }
+            
+            .grid { 
+                display: grid; 
+                grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); 
+                gap: 20px; 
+                margin-bottom: 40px; 
+            }
+            
+            .card { 
+                background: var(--bg-card); 
+                padding: 25px; 
+                border-radius: 15px; 
+                border-bottom: 4px solid var(--accent); 
+                text-align: center;
+                transition: transform 0.3s ease;
+            }
+            
+            .card:hover { transform: translateY(-5px); }
+            .card h3 { margin: 0; font-size: 12px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; }
+            .card .value { font-size: 32px; font-weight: bold; color: #fff; margin-top: 10px; }
+            
+            table { 
+                width: 100%; 
+                border-collapse: collapse; 
+                margin-top: 20px; 
+                background: rgba(0,0,0,0.2);
+                border-radius: 10px;
+                overflow: hidden;
+            }
+            
+            th, td { padding: 18px; text-align: left; border-bottom: 1px solid var(--bg-card); }
+            th { background: rgba(79, 70, 229, 0.3); color: var(--accent); font-size: 14px; }
+            tr:hover { background: rgba(255,255,255,0.02); }
+            
+            .highlight { background: rgba(129, 140, 248, 0.15) !important; font-weight: bold; }
+            .highlight td { color: var(--neon-green); }
+
+            .viz { text-align: center; margin-top: 50px; }
+            .viz h3 { color: var(--text-muted); font-weight: 400; margin-bottom: 20px; }
+            
+            /* Efeito para as imagens (que têm fundo branco) não chocarem com o fundo escuro */
+            .viz img { 
+                max-width: 100%; 
+                border-radius: 15px; 
+                box-shadow: 0 20px 25px -5px rgba(0,0,0,0.3); 
+                margin-bottom: 60px; 
+                border: 8px solid #fff; /* Moldura estilo Polaroid */
+            }
+            
+            footer { text-align: center; margin-top: 40px; color: var(--text-muted); font-size: 12px; }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <h1>🔐 Fraud Detection System</h1>
+                <p>Unsupervised Security Analysis • 284,807 Transactions processed</p>
+            </header>
+
+            <h2>📊 Executive Summary (Ensemble)</h2>
+            <div class="grid">
+                <div class="card"><h3>Total Correct (TP)</h3><div class="value" style="color:var(--neon-green)">318</div></div>
+                <div class="card"><h3>Recall Rate</h3><div class="value">64.6%</div></div>
+                <div class="card"><h3>False Alarms (FP)</h3><div class="value" style="color:var(--neon-red)">3,516</div></div>
+                <div class="card"><h3>Precision</h3><div class="value">8.3%</div></div>
+            </div>
+
+            <h2>🤖 Algorithm Performance</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>DETECTION MODEL</th>
+                        <th>TRUE POSITIVES</th>
+                        <th>FALSE ALARMS</th>
+                        <th>RECALL</th>
+                        <th>PRECISION</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Isolation Forest</td><td>285</td><td>2564</td><td>57.9%</td><td>10.0%</td></tr>
+                    <tr><td>PCA Reconstruction</td><td>301</td><td>2547</td><td>61.2%</td><td>10.6%</td></tr>
+                    <tr><td>Elliptic Envelope</td><td>6</td><td>564</td><td>1.2%</td><td>1.1%</td></tr>
+                    <tr class="highlight"><td>VOTING ENSEMBLE (FINAL)</td><td>318</td><td>3516</td><td>64.6%</td><td>8.3%</td></tr>
+                </tbody>
+            </table>
+
+            <div class="viz">
+                <h2>📈 Deep Visual Analysis</h2>
+                
+                <h3>3D Anomalies in PCA Space</h3>
+                <img src="01_3d_visualization.png">
+                
+                <h3>Performance Comparison Metrics</h3>
+                <img src="02_performance.png">
+                
+                <h3>Transaction Amount Distribution</h3>
+                <img src="03_amount_analysis.png">
+            </div>
+            
+            <footer>
+                Generated by Unsupervised Fraud Detection System • 2026
+            </footer>
+        </div>
+    </body>
+    </html>
+    
