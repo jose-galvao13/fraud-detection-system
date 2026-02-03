@@ -2,7 +2,6 @@
 
 [![Python](https://img.shields.io/badge/Python-3.7+-blue.svg)](https://www.python.org/)
 [![Scikit-Learn](https://img.shields.io/badge/Library-Scikit--Learn-orange.svg)](https://scikit-learn.org/)
-[![Visualization](https://img.shields.io/badge/UI-Dark%20Mode%20Report-purple.svg)](#)
 
 **Unsupervised Fraud Detection System** is a high-performance anomaly detection engine designed to identify fraudulent credit card transactions without the need for labeled historical data. By utilizing a multi-algorithm ensemble, the system captures complex "zero-day" fraud patterns that traditional supervised models might miss.
 
